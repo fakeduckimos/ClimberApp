@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NorwegianActivity">
+
+    <TextView
+        android:id="@+id/scoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poengsum"
+        android:textSize="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/holdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Klatreholde"
+        android:textSize="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTitle"
+        app:layout_constraintStart_toStartOf="@+id/scoreTitle"
+        app:layout_constraintEnd_toEndOf="@+id/scoreTitle"/>
+
+    <TextView
+        android:id="@+id/hold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/holdTitle"
+        app:layout_constraintStart_toStartOf="@+id/holdTitle"
+        app:layout_constraintEnd_toEndOf="@+id/holdTitle"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+        <Button
+            android:backgroundTint="@color/black"
+            android:id="@+id/ClimbButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klatre"
+            android:textSize="30dp"
+            android:paddingStart="66dp"
+            android:paddingEnd="66dp"/>
+        <Button
+            android:backgroundTint="@color/black"
+            android:id="@+id/FallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Falle"
+            android:textSize="30dp"
+            android:paddingStart="74dp"
+            android:paddingEnd="74dp"/>
+        <Button
+            android:backgroundTint="@color/black"
+            android:id="@+id/ResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tilbakestille"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
